@@ -1,1 +1,0 @@
-<h1>hello this is {{$name}}</h1>
