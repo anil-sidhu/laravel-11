@@ -12,5 +12,9 @@ class UserController extends Controller
        
         return view('home');
     }
+    function userAbout(){
+       
+        return view('about');
+    }
 }
  
