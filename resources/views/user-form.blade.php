@@ -1,40 +1,40 @@
 <div>
-    <h2>Add New User</h2>
+    <h1>Add New User</h1>
     <form action="adduser" method="post">
         @csrf
-        <div class="input-wrapper">
-            <input type="text" placeholder="Enter User name" name="username">
+        <div>
+            <h4>User skills</h4>
+            <input type="checkbox" name="skill[]" id="php" value="php">
+            <label for="php" >PHP</label>
+            <input type="checkbox" name="skill[]" id="java" value="Java">
+            <label for="java" >Java</label>
+            <input type="checkbox" name="skill[]" id="node" value="Node">
+            <label for="node" >Node</label>
         </div>
-        <div class="input-wrapper">
-            <input type="text" placeholder="Enter User email" name="email">
+        <div>
+            <h4>User Gender</h4>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male" >Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female" >Female</label>
+           
         </div>
-        <div class="input-wrapper">
-            <input type="text" placeholder="Enter User city" name="city">
+        <div>
+            <h4>User Age</h4>
+            <input type="range" name="age" id="age" max="100" min="18">
+        
         </div>
-        <div class="input-wrapper">
+        <div>
+            <h4>User City</h4>
+            <select name="city" >
+                <option value="delhi" >Delhi</option>
+                <option value="noida" >Noida</option>
+                <option value="gurgaon" >gurgaon</option>
+
+            </select>
+        </div>
+        <div>
             <button>Add New User</button>
         </div>
     </form>
-    <!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
 </div>
-<style>
-   input{
-    border: orange 1px solid;
-    height: 35px;
-    width: 200px;
-    border-radius: 2px;
-    color: orange;
-}
-.input-wrapper{
-    margin:10px
-}
-button{
-    border: orange 1px solid;
-    height: 35px;
-    width: 200px;
-    border-radius: 2px;
-    color: orange;
-    background-color: #fff;
-    cursor: pointer;
-}
-</style>

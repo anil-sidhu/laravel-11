@@ -8,10 +8,13 @@ class UserController extends Controller
 {
     //
     function addUser(Request $request){
-      echo "User name is $request->username";
-      echo "<br>";
-      echo "User city is $request->city";
-      echo "<br>";
-      echo "User email is $request->email";
+        echo $request->city;
+        echo "<br/>";
+        echo $request->gender;
+        echo "<br/>";
+        echo $request->age;
+        echo "<br/>";
+        print_r($request->skill);
+        // return $request;
     }
 }
