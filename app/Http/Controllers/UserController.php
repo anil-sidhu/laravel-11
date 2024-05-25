@@ -8,10 +8,15 @@ class UserController extends Controller
 {
     //
     function addUser(Request $request){
-      echo "User name is $request->username";
-      echo "<br>";
-      echo "User city is $request->city";
-      echo "<br>";
-      echo "User email is $request->email";
+
+        $request->validate([
+            'username'=>'required | min:3 | max:15',
+            'email'=>'required | email',
+            'city'=>'required',
+            'skills'=>'required'
+        ]);
+
+     return $request;
+      
     }
 }
