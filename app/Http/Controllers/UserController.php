@@ -12,15 +12,13 @@ class UserController extends Controller
         $request->validate([
             'username'=>'required | min:3 | max:15',
             'email'=>'required | email',
-            'city'=>'required',
-            'skills'=>'required'
+            'city'=>'required | uppercase',
         ],[
            'username.required'=>'username can not be empty',
            'username.min'=>'username min characters  should be 3',
            'username.max'=>'username max  characters limit is 15',
-        //    'email.email'=>'this email is not valid',
-
-
+           'email.email'=>'this email is not valid',
+           'city.uppercase'=>'City should be in upper case only'
         ]);
 
      return $request;
