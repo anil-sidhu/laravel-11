@@ -7,6 +7,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about/anil', function () {
+    return view('welcome');
+});
 
 Route::view('user-form','user-form');
 Route::post('adduser',[UserController::class,'addUser']);
