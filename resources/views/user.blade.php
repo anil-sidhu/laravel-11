@@ -1,19 +1,16 @@
 <div>
-    <h1>User data</h1>
-    <table border="1">
-<tr>
-    <td>Name</td>
-    <td>Email</td>
-    <td>Phone</td>
-</tr>
-@foreach($users as $user)
-<tr>
-    <td>{{$user->name}}</td>
-    <td>{{$user->email}}</td>
-    <td>{{$user->phone}}</td>
 
-</tr>
-@endforeach
-    </table>
-    <!-- Knowing is not enough; we must apply. Being willing is not enough; we must do. - Leonardo da Vinci -->
+<h1>User Form</h1>
+<form action="user" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="text" name="user" placeholder="enter name">
+    @csrf
+    <br>
+    <br>
+    <input type="password" name="password" placeholder="enter password">
+    <br>
+    <br>
+    <button>Submit</button>
+</form>
+    <!-- People find pleasure in different ways. I find it in keeping my mind clear. - Marcus Aurelius -->
 </div>
