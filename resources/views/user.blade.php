@@ -2,7 +2,6 @@
 
 <h1>User Form</h1>
 <form action="user" method="post">
-    <input type="hidden" name="_method" value="DELETE">
     <input type="text" name="user" placeholder="enter name">
     @csrf
     <br>
