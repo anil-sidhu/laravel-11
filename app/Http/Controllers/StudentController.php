@@ -16,12 +16,18 @@ class StudentController extends Controller
 
        $result= $student->save();
        if($request){
-        return "student added";
+       return redirect('list');
+        
        }else{
         return "student not added";
 
        }
+ 
+    }
 
-       
+    function list(){
+        $studentData = Student::all();
+        return view('list-student',['students'=>$studentData]);
+
     }
 }

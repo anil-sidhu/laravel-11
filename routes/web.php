@@ -8,3 +8,5 @@ Route::view("/","welcome");
 Route::view('add','add-student');
 
 Route::post('add',[StudentController::class,'add']);
+
+Route::get('list',[StudentController::class,'list']);
