@@ -6,6 +6,7 @@
     <td>Email</td>
     <td>Phone</td>
     <td>Created_at</td>
+    <td>Operations</td>
 </tr>
 @foreach($students as $student)
 <tr>
@@ -13,6 +14,7 @@
     <td>{{$student->email}}</td>
     <td>{{$student->phone}}</td>
     <td>{{$student->created_at}}</td>
+    <td><a href="{{'delete/'.$student->id}}">Delete</a></td>
 </tr>
 @endforeach
    </table>

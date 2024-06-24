@@ -30,4 +30,13 @@ class StudentController extends Controller
         return view('list-student',['students'=>$studentData]);
 
     }
+
+    function delete($id){
+         $isDelete= Student::destroy($id);
+        if($isDelete){
+            return redirect('list');
+        }else{
+            echo "record not deleted";
+        }
+    }
 }
