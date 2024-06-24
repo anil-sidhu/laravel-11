@@ -14,7 +14,11 @@
     <td>{{$student->email}}</td>
     <td>{{$student->phone}}</td>
     <td>{{$student->created_at}}</td>
-    <td><a href="{{'delete/'.$student->id}}">Delete</a></td>
+    <td>
+        <a href="{{'delete/'.$student->id}}">Delete</a>
+        <a href="{{'edit/'.$student->id}}">Edit</a>
+
+    </td>
 </tr>
 @endforeach
    </table>

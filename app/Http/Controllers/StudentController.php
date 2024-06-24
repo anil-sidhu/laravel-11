@@ -39,4 +39,9 @@ class StudentController extends Controller
             echo "record not deleted";
         }
     }
+
+    function edit($id){
+       $student= Student::find($id);
+       return view('edit-student',["data"=>$student]);
+    }
 }
