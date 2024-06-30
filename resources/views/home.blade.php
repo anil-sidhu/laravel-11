@@ -1,10 +1,22 @@
-<x-layout>
-    <x-slot name="title">Home Page</x-slot>
-    <x-slot name="main">
-    <h1>Home Page Heading</h1>
-<h3>Home Page Sub-Heading</h3>
-<p>Dummy Paragraph Text for home page</p>
+@extends('layout')
 
-    </x-slot>
+@section('title','This is Home page')
 
-</x-layout>
+
+@section('main')
+@parent
+<div class="main">
+<h1>User Home page</h1>
+<h3>Sub Heading for Home Page</h3>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>
+</div>
+@endsection
