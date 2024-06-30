@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{$title}}</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/custom.js" ></script>
     <style>
         .footer p{
     position: absolute;
@@ -14,6 +16,11 @@
     text-align: center;
 }
     </style>
+    <script>
+        function makeBlue(){
+    document.getElementById('heading').style.color="blue"
+}
+        </script>
 </head>
 <body>
     <div>

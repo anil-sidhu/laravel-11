@@ -1,14 +1,15 @@
 <x-layout>
     <x-slot name="title">Login Page</x-slot>
     <x-slot name="main">
-<h1>User Login</h1>
+<h1 id="heading" class="heading">User Login</h1>
 <input type="text" placeholder="Enter name">
 <br/>
 <br>
 <input type="text" placeholder="Enter password">
 <br>
 <br>
-<button>Login</button>
+<button onclick="makeGreen()" >Login</button>
+<button onclick="makeBlue()" >Make Blue</button>
 
     </x-slot>
 
