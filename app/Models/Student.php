@@ -9,4 +9,11 @@ class Student extends Model
 {
     use HasFactory;
 
+    function getNameAttribute($val){
+        return ucfirst($val);
+    }
+
+    function getPhoneAttribute($val){
+        return "+91-".$val;
+    }
 }
