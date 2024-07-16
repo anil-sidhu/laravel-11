@@ -1,14 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SellerController;
 
 Route::view("/","welcome");
 
-Route::get('list',[StudentController::class,'list']);
-Route::get('save',[StudentController::class,'save']);
-
-
-
+Route::get('list',[SellerController::class,'list']);
 
