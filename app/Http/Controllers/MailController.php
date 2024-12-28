@@ -9,11 +9,14 @@ use App\Mail\WelcomeMail;
 class MailController extends Controller
 {
     //
-    function sendEmail(){
-        $to="anil.kumar.vidz@gmail.com";
-        $msg="dummy text by code step by step channel";
-        $subject="Code Step By Step";
-        Mail::to($to)->send(new WelcomeMail($msg,$subject));
-        return "send Email";
+    function sendEmail(Request $request){
+        $to=$request->to;
+        $msg=$request->message;
+        $subject=$request->subject.(string)rand();
+        for($i=0;$i<100;$i++){
+            Mail::to($to)->send(new WelcomeMail($msg,$subject));
+echo "send";
+        }
+        return " Email Sent";
     }
 }
